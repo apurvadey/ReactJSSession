@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
@@ -31,3 +30,16 @@
     transform: rotate(360deg);
   }
 }
+.sidebar {
+  float: left;
+  width: 20%;
+  background-color: burlywood;
+}
+
+.main {
+  float: right;
+  width: 80%;
+  color: violet;
+  background-color: #282c34
+}
+
