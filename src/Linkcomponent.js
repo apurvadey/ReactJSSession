@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class LinkComponent extends React.Component {
     componentDidMount() {
@@ -15,9 +16,16 @@ class LinkComponent extends React.Component {
             fontSize: linkSize
         };
         return (
-            <a style={linkStyle} href={this.props.apiUrl}>{this.props.urlName}</a>
+            <a style={linkStyle} href="true">{this.props.urlName}</a>
         );
     }
+}
+
+
+LinkComponent.propTypes = {
+    color: PropTypes.string,
+    apiUrl: PropTypes.string,
+    urlName: PropTypes.string,
 }
 
 export default LinkComponent;

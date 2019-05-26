@@ -14,7 +14,7 @@ class PostListComponent extends React.Component {
             });
         }
         return (
-            <Fragment>{postContainer}</Fragment>
+            <Fragment className="post_style">{postContainer}</Fragment>
         )
     }
 }
