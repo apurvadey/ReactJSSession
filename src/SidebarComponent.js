@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css'
 //import { ReactComponent } from '*.svg';
 import LinkComponent from './Linkcomponent';
+import NameForm from './NameForm';
+
 
 
 
@@ -27,10 +29,10 @@ class SidebarComponent extends React.Component {
 
         return (
         <>
-        
             <ul>
               {linkContainer}
             </ul>
+            <NameForm/>
         </>
         );
     }
