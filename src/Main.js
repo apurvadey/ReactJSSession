@@ -1,33 +1,8 @@
 import React, {Fragment} from 'react';
 import getData from './Api';
-import './Post.css';
+import PostListComponent from './PostListComponent';
 
-class Post extends React.Component {
-   
-    render() {
-        return (
-            <h5>{this.props.post.id} : {this.props.post.title}</h5>
-        );
-    }
-}
 
-class PostListComponent extends React.Component {
-    render() {
-        let postContainer = [];
-        if(this.props.posts) {
-            this.props.posts.forEach((value, index) => {
-                postContainer.push(
-                     
-                        <Post post={value} key={index} />
-
-                );   
-            });
-        }
-        return (
-            <Fragment>{postContainer}</Fragment>
-        )
-    }
-}
 class MainComponent extends React.Component {
     constructor(props) {
         super(props);

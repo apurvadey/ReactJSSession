@@ -1,17 +1,9 @@
 import React from 'react';
 import './App.css'
 //import { ReactComponent } from '*.svg';
+import LinkComponent from './Linkcomponent';
 
-class LinkComponent extends React.Component {
-    componentDidMount() {
-        console.log("I am mounted in LinkComponent");
-    }
-    render() {
-        return (
-            <a href={this.props.apiUrl}>{this.props.urlName}</a>
-        );
-    }
-}
+
 
 class SidebarComponent extends React.Component {
     
@@ -27,7 +19,7 @@ class SidebarComponent extends React.Component {
             this.props.urlList.forEach((value, index) => {
             linkContainer.push(
             <li key={index}>
-                <LinkComponent apiUrl={value.apiUrl} urlName={value.urlName}/>
+                <LinkComponent apiUrl={value.apiUrl} urlName={value.urlName} color={value.color} fontWeight={value.fontWeight} fontSize={value.fontSize}/>
             </li>);
         });
     }

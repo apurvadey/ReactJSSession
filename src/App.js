@@ -2,7 +2,6 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import SidebarComponent from './SidebarComponent';
-import Main from './Main';
 import MainComponent from './Main';
 //function App() {
 //  return (
@@ -30,11 +29,17 @@ class App extends React.Component {
     let urlList= [
       {
         urlName: "vinit",
-        apiUrl: "https://vinitkumar.me"
+        apiUrl: "https://vinitkumar.me",
+        color: "red",
+        fontWeight: 700,
+        fontSize: "40px"
       },
       {
         urlName: "apurva",
-        apiUrl: "https://apurvadey.github.io"
+        apiUrl: "https://apurvadey.github.io",
+        color: "green",
+        fontWeight: 500,
+        fontSize: "40px"
       },
     ];
     return (
