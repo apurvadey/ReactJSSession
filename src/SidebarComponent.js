@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { lazy, Suspense} from 'react';
 import './App.css'
 //import { ReactComponent } from '*.svg';
 import LinkComponent from './Linkcomponent';
-import NameForm from './NameForm';
-
+//import NameForm from './NameForm';
+const NameForm = lazy(() => import('./NameForm'));
 
 
 
@@ -32,7 +32,9 @@ class SidebarComponent extends React.Component {
             <ul>
               {linkContainer}
             </ul>
-            <NameForm/>
+            <Suspense fallback={<div>Loading....</div>}>
+               <NameForm/>
+            </Suspense>
         </>
         );
     }
